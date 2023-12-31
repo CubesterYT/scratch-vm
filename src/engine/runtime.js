@@ -1414,7 +1414,12 @@ class Runtime extends EventEmitter {
             if (!blockInfo.disableMonitor && context.inputList.length === 0) {
                 blockJSON.checkboxInFlyout = true;
             }
-        } else if (blockInfo.blockType === BlockType.LOOP || blockInfo.branchIconURI) {
+        } else if (
+            blockInfo.branchIconURI || (
+                blockInfo.blockType === BlockType.LOOP &&
+                !Object.prototype.hasOwnProperty.call(blockInfo, 'branchIconURI')
+            )
+        ) {
             // Add icon to the bottom right of a loop block
             blockJSON[`lastDummyAlign${outLineNum}`] = 'RIGHT';
             blockJSON[`message${outLineNum}`] = '%1';
