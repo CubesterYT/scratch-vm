@@ -61,6 +61,8 @@ const interpolate = (runtime, time) => {
             continue;
         }
 
+        runtime.emit(runtime.constructor.BEFORE_INTERPOLATION, target);
+
         const drawableID = target.drawableID;
 
         // Position interpolation.
@@ -137,6 +139,8 @@ const interpolate = (runtime, time) => {
                 renderer.updateDrawableDirectionScale(drawableID, direction, scale);
             }
         }
+
+        runtime.emit(runtime.constructor.AFTER_INTERPOLATION, target);
     }
 };
 

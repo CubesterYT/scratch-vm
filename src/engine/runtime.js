@@ -644,6 +644,20 @@ class Runtime extends EventEmitter {
     }
 
     /**
+     * Event called before interpolation data is set.
+     */
+    static get BEFORE_INTERPOLATION () {
+        return 'BEFORE_INTERPOLATION';
+    }
+
+    /**
+     * Event called after interpolation data is set.
+     */
+    static get AFTER_INTERPOLATION () {
+        return 'AFTER_INTERPOLATION';
+    }
+
+    /**
      * Event name for stage size changing.
      * @const {string}
      */
