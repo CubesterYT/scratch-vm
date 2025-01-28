@@ -471,6 +471,7 @@ class Runtime extends EventEmitter {
 
         this._lastStepTime = Date.now();
         this.interpolationEnabled = false;
+        this.interpolate = interpolate;
 
         this._defaultStoredSettings = this._generateAllProjectOptions();
 
