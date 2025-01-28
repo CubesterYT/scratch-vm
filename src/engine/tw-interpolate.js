@@ -61,7 +61,7 @@ const interpolate = (runtime, time) => {
             continue;
         }
 
-        runtime.emit(runtime.constructor.BEFORE_INTERPOLATION, target);
+        runtime.emit(runtime.constructor.BEFORE_INTERPOLATE, target);
 
         const drawableID = target.drawableID;
 
@@ -140,7 +140,7 @@ const interpolate = (runtime, time) => {
             }
         }
 
-        runtime.emit(runtime.constructor.AFTER_INTERPOLATION, target);
+        runtime.emit(runtime.constructor.AFTER_INTERPOLATE, target);
     }
 };
 

@@ -647,15 +647,15 @@ class Runtime extends EventEmitter {
     /**
      * Event called before interpolation data is set.
      */
-    static get BEFORE_INTERPOLATION () {
-        return 'BEFORE_INTERPOLATION';
+    static get BEFORE_INTERPOLATE () {
+        return 'BEFORE_INTERPOLATE';
     }
 
     /**
      * Event called after interpolation data is set.
      */
-    static get AFTER_INTERPOLATION () {
-        return 'AFTER_INTERPOLATION';
+    static get AFTER_INTERPOLATE () {
+        return 'AFTER_INTERPOLATE';
     }
 
     /**
