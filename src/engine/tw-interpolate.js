@@ -53,8 +53,10 @@ const interpolate = (runtime, time) => {
         // Don't waste time interpolating sprites that are hidden.
         if (
             !target.visible ||
-            target.effects.ghost === 100 &&
-            interpolationData.ghost === 100
+            (
+                target.effects.ghost === 100 &&
+                interpolationData.ghost === 100
+            )
         ) {
             continue;
         }
